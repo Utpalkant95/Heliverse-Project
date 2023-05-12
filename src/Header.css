@@ -1,0 +1,46 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 6rem;
+    background-color: black;
+}
+
+.logo{
+   max-width: 4rem;
+   max-height: 4rem;
+   border-radius: 100%;
+   overflow: hidden;
+}
+
+.Search_Input{
+    width:50rem;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    font-size: 1.5rem ;
+    font-weight: bold;
+}
+
+.Search_Input:focus{
+    border: none;
+    outline: none;
+}
+
+@media (max-width: 664px){
+    .Search_Input{
+        width:40rem;
+    }
+}
+
+@media (max-width: 520px){
+    .Search_Input{
+        width:30rem;
+    }
+}
+
+@media (max-width: 375px){
+    .Search_Input{
+        width:20rem;
+    }
+}

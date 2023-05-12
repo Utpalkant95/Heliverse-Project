@@ -1,0 +1,124 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+  
+.grid-item {
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+.avatar{
+    width: 100%;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.card-info h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-info p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.unavailable {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.card-info p.email {
+  font-size: 12px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+
+
+/* Pagiantion comp Styling */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.pagination li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.pagination li a {
+  color: #333;
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.pagination li a:hover {
+  background-color: #ddd;
+}
+
+.pagination-active a {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.previous-page,
+.next-page {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.previous-page:hover,
+.next-page:hover {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.pagination-disabled a,
+.previous-page.pagination-disabled,
+.next-page.pagination-disabled {
+  color: #999;
+  cursor: default;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+@media (max-width:520px) {  
+  .card{
+    margin-top: 1rem;
+  }
+}
+
