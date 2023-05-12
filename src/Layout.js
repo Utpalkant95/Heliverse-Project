@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import './Layout.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { incPage} from './Actions';
 
 const Layout = (props) => {
-  const [currentPage, setCurrentPage] = useState(0);
+  const myState = useSelector((state)=>state.ChangeThePage);
+  const dispatch = useDispatch()
+
+  const [currentPage, setCurrentPage] = useState(myState);
   const PER_PAGE = 20;
   const offset = currentPage * PER_PAGE;
   const pageCount = Math.ceil(props.data.length / PER_PAGE);
 
   const handlePageClick = ({ selected: selectedPage }) => {
     setCurrentPage(selectedPage);
+    dispatch(incPage(selectedPage));
   };
 
   return (
